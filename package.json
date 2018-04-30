@@ -12,7 +12,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",
     "bootstrap-vue": "latest",
-    "jquery": "^1.12.4",
+    "jquery": "3.3.1",
     "popper.js": "^1.12.9",
     "vue": "^2.5.2",
     "vue-i18n": "^7.6.0",
