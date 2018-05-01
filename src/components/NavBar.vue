@@ -20,6 +20,9 @@
           <b-nav-item disabled>
             <router-link to="/video1">Video1</router-link>
           </b-nav-item>
+          <b-nav-item disabled>
+            <router-link to="/datatable">DataTable</router-link>
+          </b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->

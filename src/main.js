@@ -5,6 +5,9 @@ import BootstrapVue from 'bootstrap-vue';
 import App from './App';
 import router from './router';
 import VueI18n from 'vue-i18n';
+
+import Vuetify from 'vuetify';
+
 import Vuex from 'vuex';
 // import store from '@/store';
 
@@ -12,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 Vue.use(BootstrapVue);
+Vue.use(Vuetify);
 Vue.use(VueI18n);
 Vue.use(Vuex);
 

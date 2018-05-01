@@ -4,6 +4,7 @@ import Hello from '@/components/Hello';
 import Girl1 from '@/components/Girl1';
 import Girl2 from '@/components/Girl2';
 import Video1 from '@/components/Video1';
+import DataTable from '@/components/DataTable';
 
 Vue.use(Router);
 
@@ -13,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'Hello',
       component: Hello
+    },
+    {
+      path: '/datatable',
+      name: 'DataTable',
+      component: DataTable
     },
     {
       path: '/girl1',
