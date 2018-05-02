@@ -5,6 +5,7 @@ import Girl1 from '@/components/Girl1';
 import Girl2 from '@/components/Girl2';
 import Video1 from '@/components/Video1';
 import DataTable from '@/components/DataTable';
+import Vcard from '@/components/Vcard';
 
 Vue.use(Router);
 
@@ -19,6 +20,11 @@ export default new Router({
       path: '/datatable',
       name: 'DataTable',
       component: DataTable
+    },
+    {
+      path: '/vcard',
+      name: 'Vcard',
+      component: Vcard
     },
     {
       path: '/girl1',

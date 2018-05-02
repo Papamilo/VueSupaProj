@@ -13,6 +13,7 @@ import Vuex from 'vuex';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+import 'vuetify/dist/vuetify.min.css'; // Ensure you are using css-loader
 
 Vue.use(BootstrapVue);
 Vue.use(Vuetify);
