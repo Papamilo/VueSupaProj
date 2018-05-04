@@ -1,9 +1,7 @@
 <template>
   <div id="app">
-    <!-- <div :title="$t('lang.notice.msg')"></div> -->
     <!-- navbar-1.vue -->
     <nav-bar/>
-    <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>

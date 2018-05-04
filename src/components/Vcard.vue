@@ -1,6 +1,6 @@
 <template>
   <v-layout column>
-    <v-flex row xs12 sm6 offset-md-3>
+    <v-flex row xs12 sm6 offset-md-1>
       <v-toolbar color="indigo" dark>
         <v-toolbar-side-icon></v-toolbar-side-icon>
         <v-toolbar-title>Discover</v-toolbar-title>
@@ -14,7 +14,7 @@
           <v-layout row wrap>
             <v-flex v-bind="{ [`xs${card.flex}`]: true }" v-for="card in cards" :key="card.title">
               <v-card>
-                <v-card-media :src="card.src" height="200px">
+                <v-card-media :src="card.src" height="250px">
                   <v-container fill-height fluid>
                     <v-layout fill-height>
                       <v-flex xs12 align-end flexbox>
@@ -26,6 +26,7 @@
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn icon>
+                    <i class="material-icons">face</i>
                     <v-icon>favorite</v-icon>
                   </v-btn>
                   <v-btn icon>
