@@ -26,13 +26,14 @@
                 <v-card-actions>
                   <v-spacer></v-spacer>
 
-                  <v-card-media :src="card.src" height="250px" @mouseover="isBlockAct = true" @mouseleave="isBlockAct = (!checked?false:true)">
+                  <v-card-media :src="card.src" height="250px" @mouseover="hoverMe = true" @mouseleave="hoverMe = (!checked?false:true)">
                     <v-container fill-height fluid>
                       <v-layout fill-height>
                         <v-flex xs12 align-end flexbox>
                           <span class="headline white--text" v-text="card.title"></span>
                         </v-flex>
-                        <v-flex class="myHoverClass" :class="{'isActiv': hoverMe, 'isNotActiv': !hoverMe}" d-flex flex-start>
+
+                        <v-flex d-flex flex-start>
                           <v-checkbox v-model="checked" id="checkbox" class="diCheckbox pt-1" hide-details></v-checkbox>
                           <label for="checkbox">{{ checked }}</label>
                         </v-flex>
@@ -54,12 +55,32 @@
                   </v-btn>
                 </v-card-actions>
               </v-card>
+              <!-- A placer en dehors du layout principal pour avoir le mouse leave  -->
+              <v-card>
+                <div class="myHoverClass" :class="{'isActiv': hoverMe, 'isNotActiv': !hoverMe}">
+                  <h1>Toto fais du vélo !!!</h1>
+                  <v-flex>
+                    <v-btn icon small>
+                      <v-icon class="material-icons">remove_red_eye</v-icon>
+                    </v-btn>
+                    <v-btn icon right small>
+                      <v-icon class="material-icons " ligth>autorenew</v-icon>
+                    </v-btn>
+                    <v-btn icon right small>
+                      <v-icon class="material-icons" ligth>delete</v-icon>
+                    </v-btn>
+                  </v-flex>
+                </div>
+              </v-card>
+
             </v-flex>
           </v-layout>
+
         </v-container>
       </v-card>
     </v-flex>
   </v-layout>
+
 </template>
 
 
@@ -90,7 +111,14 @@ export default {
         flex: 6
       }
     ]
-  })
+  }),
+  methods: {
+    // toggleBlock() {
+    //   if (!this.hoverMe) {
+    //     this.hoverMe = this.checked;
+    //   }
+    // }
+  }
 };
 </script>
 
@@ -105,5 +133,10 @@ export default {
 
 .hoverOne {
   background: blueviolet;
+}
+
+.myHoverClass {
+  height: 250px;
+  background: blue;
 }
 </style>
